@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 02 Agu 2018 pada 14.31
--- Versi server: 10.1.31-MariaDB
--- Versi PHP: 7.2.3
+-- Generation Time: Oct 26, 2018 at 10:52 PM
+-- Server version: 10.1.31-MariaDB
+-- PHP Version: 7.2.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `bank`
+-- Table structure for table `bank`
 --
 
 CREATE TABLE `bank` (
@@ -37,7 +37,7 @@ CREATE TABLE `bank` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `bank`
+-- Dumping data for table `bank`
 --
 
 INSERT INTO `bank` (`bank_id`, `bank_nama`, `bank_pemilik`, `bank_norek`, `bank_file`) VALUES
@@ -47,7 +47,7 @@ INSERT INTO `bank` (`bank_id`, `bank_nama`, `bank_pemilik`, `bank_norek`, `bank_
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `barang`
+-- Table structure for table `barang`
 --
 
 CREATE TABLE `barang` (
@@ -60,7 +60,7 @@ CREATE TABLE `barang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `barang`
+-- Dumping data for table `barang`
 --
 
 INSERT INTO `barang` (`barang_kode`, `list_id`, `barang_nama`, `barang_harga`, `barang_ket`, `barang_gambar`) VALUES
@@ -80,7 +80,7 @@ INSERT INTO `barang` (`barang_kode`, `list_id`, `barang_nama`, `barang_harga`, `
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `cart`
+-- Table structure for table `cart`
 --
 
 CREATE TABLE `cart` (
@@ -96,7 +96,7 @@ CREATE TABLE `cart` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `cart`
+-- Dumping data for table `cart`
 --
 
 INSERT INTO `cart` (`cart_kode`, `user_id`, `type_id`, `shape_id`, `barang_kode`, `cart_total`, `cart_message`, `cart_status`, `cart_tanggal`) VALUES
@@ -113,7 +113,7 @@ INSERT INTO `cart` (`cart_kode`, `user_id`, `type_id`, `shape_id`, `barang_kode`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `coment`
+-- Table structure for table `coment`
 --
 
 CREATE TABLE `coment` (
@@ -125,7 +125,7 @@ CREATE TABLE `coment` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `coment`
+-- Dumping data for table `coment`
 --
 
 INSERT INTO `coment` (`coment_id`, `topic_id`, `user_id`, `coment_isi`, `coment_tanggal`) VALUES
@@ -139,7 +139,7 @@ INSERT INTO `coment` (`coment_id`, `topic_id`, `user_id`, `coment_isi`, `coment_
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `detail_user`
+-- Table structure for table `detail_user`
 --
 
 CREATE TABLE `detail_user` (
@@ -153,7 +153,7 @@ CREATE TABLE `detail_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `detail_user`
+-- Dumping data for table `detail_user`
 --
 
 INSERT INTO `detail_user` (`user_id`, `user_nama`, `user_jk`, `user_tgl_lahir`, `user_tel`, `user_alamat`, `user_foto`) VALUES
@@ -165,12 +165,13 @@ INSERT INTO `detail_user` (`user_id`, `user_nama`, `user_jk`, `user_tgl_lahir`, 
 (6, 'ici', 'L', '0000-00-00', '', '', 'avatar-01.jpg'),
 (7, 'Aryass', 'P', '2018-07-19', '02020', 'aaaaa', '1df171de73256dd45a35e455ad2c7cf1.jpg'),
 (11, 'bro', 'L', '0000-00-00', '', '', 'avatar-01,jpg'),
-(12, 'yoga', 'L', '0000-00-00', '', '', 'avatar-01,jpg');
+(12, 'yoga', 'L', '0000-00-00', '', '', 'avatar-01,jpg'),
+(13, 'PIMpim', 'L', '2018-09-24', '08222', 'aa', 'avatar-01,jpg');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `forum`
+-- Table structure for table `forum`
 --
 
 CREATE TABLE `forum` (
@@ -180,7 +181,7 @@ CREATE TABLE `forum` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `forum`
+-- Dumping data for table `forum`
 --
 
 INSERT INTO `forum` (`forum_id`, `forum_judul`, `forum_subjudul`) VALUES
@@ -191,7 +192,7 @@ INSERT INTO `forum` (`forum_id`, `forum_judul`, `forum_subjudul`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kategori`
+-- Table structure for table `kategori`
 --
 
 CREATE TABLE `kategori` (
@@ -201,7 +202,7 @@ CREATE TABLE `kategori` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `kategori`
+-- Dumping data for table `kategori`
 --
 
 INSERT INTO `kategori` (`kategori_id`, `type_id`, `kategori_nama`) VALUES
@@ -219,7 +220,7 @@ INSERT INTO `kategori` (`kategori_id`, `type_id`, `kategori_nama`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `list`
+-- Table structure for table `list`
 --
 
 CREATE TABLE `list` (
@@ -229,7 +230,7 @@ CREATE TABLE `list` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `list`
+-- Dumping data for table `list`
 --
 
 INSERT INTO `list` (`list_id`, `kategori_id`, `list_nama`) VALUES
@@ -248,7 +249,7 @@ INSERT INTO `list` (`list_id`, `kategori_id`, `list_nama`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ongkir`
+-- Table structure for table `ongkir`
 --
 
 CREATE TABLE `ongkir` (
@@ -258,7 +259,7 @@ CREATE TABLE `ongkir` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `ongkir`
+-- Dumping data for table `ongkir`
 --
 
 INSERT INTO `ongkir` (`ongkir_id`, `ongkir_provinsi`, `ongkir_biaya`) VALUES
@@ -300,7 +301,7 @@ INSERT INTO `ongkir` (`ongkir_id`, `ongkir_provinsi`, `ongkir_biaya`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pembayaran`
+-- Table structure for table `pembayaran`
 --
 
 CREATE TABLE `pembayaran` (
@@ -312,7 +313,7 @@ CREATE TABLE `pembayaran` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `pembayaran`
+-- Dumping data for table `pembayaran`
 --
 
 INSERT INTO `pembayaran` (`pembayaran_id`, `cart_kode`, `bank_id`, `pembayaran_file`, `pembayaran_date`) VALUES
@@ -327,7 +328,7 @@ INSERT INTO `pembayaran` (`pembayaran_id`, `cart_kode`, `bank_id`, `pembayaran_f
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pemesanan`
+-- Table structure for table `pemesanan`
 --
 
 CREATE TABLE `pemesanan` (
@@ -346,7 +347,7 @@ CREATE TABLE `pemesanan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `pemesanan`
+-- Dumping data for table `pemesanan`
 --
 
 INSERT INTO `pemesanan` (`pemesanan_id`, `cart_kode`, `ongkir_id`, `pemesanan_nama`, `pemesanan_tel`, `pemesanan_kota`, `pemesanan_alamat`, `pemesanan_message`, `pemesanan_total`, `pemesanan_diskon`, `pemesanan_status`, `pemesanan_date`) VALUES
@@ -362,7 +363,7 @@ INSERT INTO `pemesanan` (`pemesanan_id`, `cart_kode`, `ongkir_id`, `pemesanan_na
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pesan`
+-- Table structure for table `pesan`
 --
 
 CREATE TABLE `pesan` (
@@ -375,7 +376,7 @@ CREATE TABLE `pesan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `pesan`
+-- Dumping data for table `pesan`
 --
 
 INSERT INTO `pesan` (`pesan_id`, `user_id`, `pemesanan_id`, `pesan_message`, `pesan_file`, `pesan_tanggal`) VALUES
@@ -389,7 +390,7 @@ INSERT INTO `pesan` (`pesan_id`, `user_id`, `pemesanan_id`, `pesan_message`, `pe
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `poin`
+-- Table structure for table `poin`
 --
 
 CREATE TABLE `poin` (
@@ -402,7 +403,7 @@ CREATE TABLE `poin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `poin`
+-- Dumping data for table `poin`
 --
 
 INSERT INTO `poin` (`poin_id`, `user_id`, `transaksi_kode`, `poin_jumlah`, `poin_status`, `poin_tanggal`) VALUES
@@ -414,7 +415,7 @@ INSERT INTO `poin` (`poin_id`, `user_id`, `transaksi_kode`, `poin_jumlah`, `poin
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `portfolio`
+-- Table structure for table `portfolio`
 --
 
 CREATE TABLE `portfolio` (
@@ -427,7 +428,7 @@ CREATE TABLE `portfolio` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `portfolio`
+-- Dumping data for table `portfolio`
 --
 
 INSERT INTO `portfolio` (`portfolio_id`, `user_id`, `portfolio_judul`, `portfolio_keterangan`, `portfolio_foto`, `portfolio_tanggal`) VALUES
@@ -437,7 +438,7 @@ INSERT INTO `portfolio` (`portfolio_id`, `user_id`, `portfolio_judul`, `portfoli
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `repairmodif`
+-- Table structure for table `repairmodif`
 --
 
 CREATE TABLE `repairmodif` (
@@ -448,7 +449,7 @@ CREATE TABLE `repairmodif` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `repairmodif`
+-- Dumping data for table `repairmodif`
 --
 
 INSERT INTO `repairmodif` (`rm_kode`, `rm_kategori_id`, `rm_nama`, `rm_harga`) VALUES
@@ -462,7 +463,7 @@ INSERT INTO `repairmodif` (`rm_kode`, `rm_kategori_id`, `rm_nama`, `rm_harga`) V
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `rm_kategori`
+-- Table structure for table `rm_kategori`
 --
 
 CREATE TABLE `rm_kategori` (
@@ -472,7 +473,7 @@ CREATE TABLE `rm_kategori` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `rm_kategori`
+-- Dumping data for table `rm_kategori`
 --
 
 INSERT INTO `rm_kategori` (`rm_kategori_id`, `rm_kategori_nama`, `rm_kategori_jenis`) VALUES
@@ -485,7 +486,7 @@ INSERT INTO `rm_kategori` (`rm_kategori_id`, `rm_kategori_nama`, `rm_kategori_je
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `shape`
+-- Table structure for table `shape`
 --
 
 CREATE TABLE `shape` (
@@ -496,7 +497,7 @@ CREATE TABLE `shape` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `shape`
+-- Dumping data for table `shape`
 --
 
 INSERT INTO `shape` (`shape_id`, `type_id`, `shape_nama`, `shape_gambar`) VALUES
@@ -512,7 +513,7 @@ INSERT INTO `shape` (`shape_id`, `type_id`, `shape_nama`, `shape_gambar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `topic`
+-- Table structure for table `topic`
 --
 
 CREATE TABLE `topic` (
@@ -525,7 +526,7 @@ CREATE TABLE `topic` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `topic`
+-- Dumping data for table `topic`
 --
 
 INSERT INTO `topic` (`topic_id`, `forum_id`, `user_id`, `topic_judul`, `topic_isi`, `topic_tanggal`) VALUES
@@ -537,7 +538,7 @@ INSERT INTO `topic` (`topic_id`, `forum_id`, `user_id`, `topic_judul`, `topic_is
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `type`
+-- Table structure for table `type`
 --
 
 CREATE TABLE `type` (
@@ -547,7 +548,7 @@ CREATE TABLE `type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `type`
+-- Dumping data for table `type`
 --
 
 INSERT INTO `type` (`type_id`, `type_nama`, `type_ket`) VALUES
@@ -557,7 +558,7 @@ INSERT INTO `type` (`type_id`, `type_nama`, `type_ket`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -570,7 +571,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`user_id`, `user_username`, `user_password`, `user_email`, `user_role`, `user_last_login`) VALUES
@@ -593,20 +594,20 @@ INSERT INTO `user` (`user_id`, `user_username`, `user_password`, `user_email`, `
 --
 
 --
--- Indeks untuk tabel `bank`
+-- Indexes for table `bank`
 --
 ALTER TABLE `bank`
   ADD PRIMARY KEY (`bank_id`);
 
 --
--- Indeks untuk tabel `barang`
+-- Indexes for table `barang`
 --
 ALTER TABLE `barang`
   ADD PRIMARY KEY (`barang_kode`),
   ADD KEY `id_list` (`list_id`);
 
 --
--- Indeks untuk tabel `cart`
+-- Indexes for table `cart`
 --
 ALTER TABLE `cart`
   ADD PRIMARY KEY (`cart_kode`),
@@ -615,7 +616,7 @@ ALTER TABLE `cart`
   ADD KEY `cart_ibfk_3` (`user_id`);
 
 --
--- Indeks untuk tabel `coment`
+-- Indexes for table `coment`
 --
 ALTER TABLE `coment`
   ADD PRIMARY KEY (`coment_id`),
@@ -623,53 +624,53 @@ ALTER TABLE `coment`
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indeks untuk tabel `detail_user`
+-- Indexes for table `detail_user`
 --
 ALTER TABLE `detail_user`
   ADD KEY `id_user` (`user_id`);
 
 --
--- Indeks untuk tabel `forum`
+-- Indexes for table `forum`
 --
 ALTER TABLE `forum`
   ADD PRIMARY KEY (`forum_id`);
 
 --
--- Indeks untuk tabel `kategori`
+-- Indexes for table `kategori`
 --
 ALTER TABLE `kategori`
   ADD PRIMARY KEY (`kategori_id`),
   ADD KEY `type_id` (`type_id`);
 
 --
--- Indeks untuk tabel `list`
+-- Indexes for table `list`
 --
 ALTER TABLE `list`
   ADD PRIMARY KEY (`list_id`),
   ADD KEY `id_kategori` (`kategori_id`);
 
 --
--- Indeks untuk tabel `ongkir`
+-- Indexes for table `ongkir`
 --
 ALTER TABLE `ongkir`
   ADD PRIMARY KEY (`ongkir_id`);
 
 --
--- Indeks untuk tabel `pembayaran`
+-- Indexes for table `pembayaran`
 --
 ALTER TABLE `pembayaran`
   ADD PRIMARY KEY (`pembayaran_id`),
   ADD KEY `cart_kode` (`cart_kode`);
 
 --
--- Indeks untuk tabel `pemesanan`
+-- Indexes for table `pemesanan`
 --
 ALTER TABLE `pemesanan`
   ADD PRIMARY KEY (`pemesanan_id`),
   ADD KEY `cart_kode` (`cart_kode`);
 
 --
--- Indeks untuk tabel `pesan`
+-- Indexes for table `pesan`
 --
 ALTER TABLE `pesan`
   ADD PRIMARY KEY (`pesan_id`),
@@ -677,7 +678,7 @@ ALTER TABLE `pesan`
   ADD KEY `pemesanan_id` (`pemesanan_id`);
 
 --
--- Indeks untuk tabel `poin`
+-- Indexes for table `poin`
 --
 ALTER TABLE `poin`
   ADD PRIMARY KEY (`poin_id`),
@@ -685,33 +686,33 @@ ALTER TABLE `poin`
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indeks untuk tabel `portfolio`
+-- Indexes for table `portfolio`
 --
 ALTER TABLE `portfolio`
   ADD PRIMARY KEY (`portfolio_id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indeks untuk tabel `repairmodif`
+-- Indexes for table `repairmodif`
 --
 ALTER TABLE `repairmodif`
   ADD PRIMARY KEY (`rm_kode`);
 
 --
--- Indeks untuk tabel `rm_kategori`
+-- Indexes for table `rm_kategori`
 --
 ALTER TABLE `rm_kategori`
   ADD PRIMARY KEY (`rm_kategori_id`);
 
 --
--- Indeks untuk tabel `shape`
+-- Indexes for table `shape`
 --
 ALTER TABLE `shape`
   ADD PRIMARY KEY (`shape_id`),
   ADD KEY `type_id` (`type_id`);
 
 --
--- Indeks untuk tabel `topic`
+-- Indexes for table `topic`
 --
 ALTER TABLE `topic`
   ADD PRIMARY KEY (`topic_id`),
@@ -719,129 +720,129 @@ ALTER TABLE `topic`
   ADD KEY `forum_id` (`forum_id`);
 
 --
--- Indeks untuk tabel `type`
+-- Indexes for table `type`
 --
 ALTER TABLE `type`
   ADD PRIMARY KEY (`type_id`);
 
 --
--- Indeks untuk tabel `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`user_id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `bank`
+-- AUTO_INCREMENT for table `bank`
 --
 ALTER TABLE `bank`
   MODIFY `bank_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `coment`
+-- AUTO_INCREMENT for table `coment`
 --
 ALTER TABLE `coment`
   MODIFY `coment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT untuk tabel `forum`
+-- AUTO_INCREMENT for table `forum`
 --
 ALTER TABLE `forum`
   MODIFY `forum_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `kategori`
+-- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
   MODIFY `kategori_id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
--- AUTO_INCREMENT untuk tabel `list`
+-- AUTO_INCREMENT for table `list`
 --
 ALTER TABLE `list`
   MODIFY `list_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
--- AUTO_INCREMENT untuk tabel `ongkir`
+-- AUTO_INCREMENT for table `ongkir`
 --
 ALTER TABLE `ongkir`
   MODIFY `ongkir_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
--- AUTO_INCREMENT untuk tabel `pembayaran`
+-- AUTO_INCREMENT for table `pembayaran`
 --
 ALTER TABLE `pembayaran`
   MODIFY `pembayaran_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT untuk tabel `pemesanan`
+-- AUTO_INCREMENT for table `pemesanan`
 --
 ALTER TABLE `pemesanan`
   MODIFY `pemesanan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
--- AUTO_INCREMENT untuk tabel `pesan`
+-- AUTO_INCREMENT for table `pesan`
 --
 ALTER TABLE `pesan`
   MODIFY `pesan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT untuk tabel `poin`
+-- AUTO_INCREMENT for table `poin`
 --
 ALTER TABLE `poin`
   MODIFY `poin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT untuk tabel `portfolio`
+-- AUTO_INCREMENT for table `portfolio`
 --
 ALTER TABLE `portfolio`
   MODIFY `portfolio_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `rm_kategori`
+-- AUTO_INCREMENT for table `rm_kategori`
 --
 ALTER TABLE `rm_kategori`
   MODIFY `rm_kategori_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT untuk tabel `shape`
+-- AUTO_INCREMENT for table `shape`
 --
 ALTER TABLE `shape`
   MODIFY `shape_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT untuk tabel `topic`
+-- AUTO_INCREMENT for table `topic`
 --
 ALTER TABLE `topic`
   MODIFY `topic_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `type`
+-- AUTO_INCREMENT for table `type`
 --
 ALTER TABLE `type`
   MODIFY `type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT untuk tabel `user`
+-- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `barang`
+-- Constraints for table `barang`
 --
 ALTER TABLE `barang`
   ADD CONSTRAINT `barang_ibfk_2` FOREIGN KEY (`list_id`) REFERENCES `list` (`list_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `cart`
+-- Constraints for table `cart`
 --
 ALTER TABLE `cart`
   ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`shape_id`) REFERENCES `shape` (`shape_id`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -849,70 +850,70 @@ ALTER TABLE `cart`
   ADD CONSTRAINT `cart_ibfk_3` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `coment`
+-- Constraints for table `coment`
 --
 ALTER TABLE `coment`
   ADD CONSTRAINT `coment_ibfk_1` FOREIGN KEY (`topic_id`) REFERENCES `topic` (`topic_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `coment_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `detail_user`
+-- Constraints for table `detail_user`
 --
 ALTER TABLE `detail_user`
   ADD CONSTRAINT `detail_user_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `kategori`
+-- Constraints for table `kategori`
 --
 ALTER TABLE `kategori`
   ADD CONSTRAINT `kategori_ibfk_1` FOREIGN KEY (`type_id`) REFERENCES `type` (`type_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `list`
+-- Constraints for table `list`
 --
 ALTER TABLE `list`
   ADD CONSTRAINT `list_ibfk_1` FOREIGN KEY (`kategori_id`) REFERENCES `kategori` (`kategori_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `pembayaran`
+-- Constraints for table `pembayaran`
 --
 ALTER TABLE `pembayaran`
   ADD CONSTRAINT `pembayaran_ibfk_1` FOREIGN KEY (`cart_kode`) REFERENCES `cart` (`cart_kode`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `pemesanan`
+-- Constraints for table `pemesanan`
 --
 ALTER TABLE `pemesanan`
   ADD CONSTRAINT `pemesanan_ibfk_1` FOREIGN KEY (`cart_kode`) REFERENCES `cart` (`cart_kode`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `pesan`
+-- Constraints for table `pesan`
 --
 ALTER TABLE `pesan`
   ADD CONSTRAINT `pesan_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `pesan_ibfk_2` FOREIGN KEY (`pemesanan_id`) REFERENCES `pemesanan` (`pemesanan_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `poin`
+-- Constraints for table `poin`
 --
 ALTER TABLE `poin`
   ADD CONSTRAINT `poin_ibfk_1` FOREIGN KEY (`transaksi_kode`) REFERENCES `cart` (`cart_kode`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `poin_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `portfolio`
+-- Constraints for table `portfolio`
 --
 ALTER TABLE `portfolio`
   ADD CONSTRAINT `portfolio_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `shape`
+-- Constraints for table `shape`
 --
 ALTER TABLE `shape`
   ADD CONSTRAINT `shape_ibfk_1` FOREIGN KEY (`type_id`) REFERENCES `type` (`type_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `topic`
+-- Constraints for table `topic`
 --
 ALTER TABLE `topic`
   ADD CONSTRAINT `topic_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE,
