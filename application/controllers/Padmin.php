@@ -13,7 +13,7 @@ class Padmin extends CI_Controller{
 	public function index(){
 		if(isset($_SESSION['logged_in'])){
 			$role=$_SESSION['role'];
-			if($role=='admin' || $role='pimpinan'){
+			if($role=='admin' || $role=='pimpinan'){
 				$x['cselesai']=$this->m_padmin->count_selesai();
 				$x['cmenunggu']=$this->m_padmin->count_menunggu();
 				$x['ckonfirm']=$this->m_padmin->count_konfirmp();
@@ -83,7 +83,7 @@ class Padmin extends CI_Controller{
 		}
 
 
-		public function print()
+		public function printr()
 		{
 			if(isset($_SESSION['logged_in'])){
 				$role=$_SESSION['role'];
