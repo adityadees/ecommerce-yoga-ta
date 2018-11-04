@@ -29,7 +29,7 @@
                    ?>
                    <tr>
                     <td><?php echo $no; ?></td>
-                    <td><?php echo $i['forum_judul']; ?></td>
+                    <td><a href="<?php echo base_url() ?>forum/<?php echo $i['forum_id']; ?>"><?php echo $i['forum_judul']; ?></a></td>
                     <td><?php echo $i['forum_subjudul']; ?></td>
                     <td  class="text-center">
                      <a class="btn btn-primary" data-toggle="modal" data-target="#ModalEdit<?php echo $i['forum_id'];?>">Edit Forum</span></a>

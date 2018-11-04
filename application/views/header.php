@@ -122,14 +122,14 @@ if(isset($_SESSION['logged_in'])){
 							<i class="zmdi zmdi-search"></i>
 						</div>
 						<?php
-						if(isset($userid)){
+						if(isset($user_Log)){
 							$tcart=$this->m_padmin->get_total_cart($userid);
 							$b=$tcart->row_array();
 							?>
 							<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="<?php echo $b['totalcart']; ?>">
 								<i class="zmdi zmdi-shopping-cart"></i>
 							</div>
-						<?php 	}?>
+						<?php 	} ?>
 					</div>
 				</nav>
 			</div>	

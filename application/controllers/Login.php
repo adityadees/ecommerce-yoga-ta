@@ -16,7 +16,8 @@ class Login extends CI_Controller{
 				'userid'   => $xcadmin['user_id'],
 				'username'  => $xcadmin['user_username'],
 				'role'      => $xcadmin['user_role'],
-				'logged_in' => TRUE
+				'logged_in' => TRUE,
+				'user_Log' => TRUE,
 			);
 
 			$this->session->set_userdata($newdata);

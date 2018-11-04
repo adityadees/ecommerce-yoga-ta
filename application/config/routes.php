@@ -52,9 +52,10 @@ $route['blogs/(:any)']='blog/detail/$1';
 */
 
 $route['admin/logout']='loginadmin/logout';
-$route['admin']='loginadmin';
+$route['admin']='padmin';
 $route['logout']='login/logout';
 $route['forum/forum']='padmin/forum';
+$route['forum/forum/(:any)'] = 'padmin/subforum/$1';
 $route['bank']='padmin/bank';
 $route['user']='padmin/user';
 $route['transaksi']='padmin/transaksi';
